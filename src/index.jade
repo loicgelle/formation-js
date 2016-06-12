@@ -1,9 +1,12 @@
 doctype html
-html(ng-app="todo-list")
+html(ng-app="todo-list" ng-controller='TodoListController')
   head
     meta(charset="utf-8")
-    title(ng-controller='TodoListController') {{title}}
+    title {{title}}
   body
     h1 Hello world
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js")
+    script(src="../bower_components/angular/angular.min.js")
     script(src="app.js")
+    ul(ng-repeat='todo in todolist')
+      li {{todo.task}} (priorité : {{todo.priority}})
+      span(ng-show='todo.checked') [OK]
