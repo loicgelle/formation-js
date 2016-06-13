@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bower": "^1.7.9",
-    "chai": "^3.5.0",
+    "bower": "1.7.9",
+    "chai": "3.5.0",
     "coffee-script": "1.10.0",
     "jade": "1.11.0",
-    "mocha": "^2.5.3"
+    "mocha": "2.5.3"
   }
 }
