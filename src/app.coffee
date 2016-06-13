@@ -6,12 +6,11 @@ angular.module 'todo-list', []
     $scope.remove = (taskToRemove) ->
         $scope.todolist.splice($scope.todolist.indexOf(taskToRemove), 1)
         return
-    $scope.add = () ->
-        $scope.todolist.push({
+    $scope.add = ->
+        $scope.todolist.push
             task: $scope.formtask,
             priority: $scope.formpriority,
             checked: $scope.formdone
-            })
         $scope.formtask = ''
         $scope.formpriority = 0
         $scope.formdone = false

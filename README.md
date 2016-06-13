@@ -1,1 +1,1 @@
-Projet de formation JS avant arrivée chez Theodo.
+Projet de formation JS pour arrivée à Theodo.

@@ -13,7 +13,12 @@ html(ng-app="todo-list" ng-controller='TodoListController')
       li(class='list-group-item')
         span(ng-show='todo.checked' class='badge') OK
         span(role='button' class='glyphicon glyphicon-remove' ng-click='remove(todo)')
-        {{todo.task}} (priorité : {{todo.priority}})
+        span(role='button' class='glyphicon glyphicon-edit' ng-click='todo.edit = true')
+        span(ng-hide='todo.edit')
+            | {{todo.task}}
+            | (priorité : {{todo.priority}})
+        input(type='text' ng-show='todo.edit' ng-model='todo.task')
+        button.btn-xs(type='submit' ng-show='todo.edit' ng-click='todo.edit = false') Modifier
 
     h3 Ajouter un item
     form()
